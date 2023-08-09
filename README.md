@@ -1,2 +1,3 @@
-# modeljar
-Like pytorch hub but with more flexibility
+# model_jar
+
+Model Jar made easy.
