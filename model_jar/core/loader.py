@@ -17,11 +17,11 @@ def load_from_dir(
         model_attributes = getattr(model_jar_module, 'default_attributes')
 
     except ImportError:
-        raise ImportError("The model_jar is not found.")
+        raise ImportError("The model_jar.py file is not found.")
 
     except AttributeError:
         available_names = [attr for attr in dir(model_jar_module) if not attr.startswith("_")]
-        raise ValueError(f"The model class '{name}' was not found in hubconf.py. Available model classes: {available_names}")
+        raise ValueError(f"The model class '{name}' was not found in model_jar.py. Available model classes: {available_names}")
 
     model = ModelClass(model_attributes[name])
 
