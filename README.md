@@ -46,11 +46,10 @@ pip install .
 ### Usage example 
 
 ```
-from model_jar import download_model, load_from_dir
+from model_jar import download_model_from_azure, load_from_dir
 
 # Download model from azure storage and unzip
-download_model(
-    provide = 'azure',
+download_model_from_azure(
     config  = {
         'name'           : '2023_03_23_wav2vec2_finetuned_ljspeech.zip',
         'account_url'    : 'account_url',
@@ -60,7 +59,7 @@ download_model(
         'tenant_id'      : 'tenant_id',
     },
     dir_path = './models',
-    unzip    = True
+    unzip    = True,
 )
 
 # Load model from dir
